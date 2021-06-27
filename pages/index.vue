@@ -1,7 +1,9 @@
 <template>
-  <div class="container">
+  <div>
+    <AppBar />
+    <AboutMe />
+    <Logo />
     <div>
-      <Logo />
       <h1 class="title">
         manders-site
       </h1>
