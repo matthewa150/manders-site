@@ -1,6 +1,6 @@
 <template>
   <!-- credit: https://codepen.io/Maxalos/pen/MXXqGj -->
-  <section>
+  <section class="experience">
     <b-container class="py-2 mt-4 mb-4" style="flex-direction: column">
       <b-row v-for="(exp, idx) in experiences" :key="exp.place" no-gutters>
         <template v-if="!(idx % 2)">
