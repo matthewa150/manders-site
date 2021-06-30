@@ -67,7 +67,6 @@ export default {
 <style>
 .sect-pt4 {
   padding-top: 4rem;
-  min-height: 0;
 }
 
 .info-card {
