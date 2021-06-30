@@ -1,7 +1,10 @@
 <template>
-  <section class="timeline-area">
-    <b-container class="text-left">
+  <section>
+    <b-container class="timeline-box">
       <b-row>
+        <h3 class="timeline-head">Experiences</h3>
+      </b-row>
+      <b-row class="text-left">
         <ul class="list">
           <li v-for="exp in experiences" :key="exp.place">
             <span></span>
@@ -48,6 +51,32 @@ export default {
 </script>
 
 <style scoped>
+/* Timeline wrapper */
+.timeline-box {
+  margin-top: 4rem;
+  flex-direction: column;
+}
+
+.timeline-head {
+  margin-bottom: 2rem;
+  color: #fff;
+    font-size: 2rem;
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.timeline-head::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100px;
+  bottom: -12px;
+  left: 50%;
+  margin-left: -50px;
+}
+
 /* Timeline List */
 .list {
   max-width: 460px;
@@ -136,10 +165,6 @@ position: relative;
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 0px;
   margin-top: 0;
-}
-
-.timeline-area {
-  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
 }
 
 </style>
