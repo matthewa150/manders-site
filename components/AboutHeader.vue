@@ -12,7 +12,7 @@
     <div>
       <b-container>
         <b-row align-v="center">
-          <b-col sm="4">
+          <b-col xs="12" sm="4">
             <b-img fluid rounded="circle" src="profile.jpg" alt="Profile Picture" class="profile-pic"/>
           </b-col>
           <b-col sm="8">
@@ -124,9 +124,10 @@ export default {
 
 <style>
 .profile-pic {
-  outline: 3px solid white;
-  outline-offset: 5px;
-  margin: 10px;
+  border-style: solid;
+  border-color: white;
+  padding: 5px;
+  border-width: 3px;
 }
 
 .big-header, .vue-typer .custom.char {
