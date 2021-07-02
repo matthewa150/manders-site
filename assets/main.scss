@@ -1,5 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
+
+
+$primary-color: #9d2933;
+$interim-color: #d69592;
+$ending-color: #ffffff;
+
+$lighten-percent: 50;
+$primary-color-light: lighten($primary-color, $lighten-percent);
+
 body {
     font-family: 'Oxygen', sans-serif;
 }
+
+///////////////////////////
+// Progress bar scheming //
+///////////////////////////
+
+.progress {
+    height: 5px;
+}
+
+.progress .progress-towards {
+    background-color: $primary-color;
+}
+
+.progress .progress-against {
+    background-color: $primary-color-light;
+}
+
+///////////////////
+// Fancy Headers //
+///////////////////
+
+h2.about-title::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: $primary-color;
+    width: 100px;
+    bottom: -12px;
+    left: 50%;
+    margin-left: -50px;
+  }
+  
+h2.about-title {
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+  }

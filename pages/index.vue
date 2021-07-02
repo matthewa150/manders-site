@@ -1,8 +1,9 @@
 <template>
   <div>
-    <AppBar />
-    <AboutMe />
+    <AboutHeader />
     <CleanTime />
+    <!-- Ideas: blog posts, project highlights -->
+    <Footer />
   </div>
 </template>
 
@@ -24,6 +25,10 @@ export default {}
 }
 
 body {
-  background-color: rgb(245,245,245);
+  /*background-color: rgb(245,245,245);*/
+  /*background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);*/
+  background-image: url('/lowpoly.png');
+  background-size: cover;
+  background-attachment: fixed;
 }
 </style>
