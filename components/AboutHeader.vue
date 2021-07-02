@@ -16,12 +16,24 @@
             <b-img fluid rounded="circle" src="profile.jpg" alt="Profile Picture" class="profile-pic"/>
           </b-col>
           <b-col sm="8">
-            <div class="h-100">
+            <div class="h-100 big-header">
               <h1>
                 I am Matthew Anderson
               </h1>
               <h3>
-                Insert typing text
+                <vue-typer
+                  :text='["Software Engineer","College Student","Japanese Speaker","Baseball Fan"]'
+                  :repeat='Infinity'
+                  :shuffle='true'
+                  initial-action='typing'
+                  :pre-type-delay='70'
+                  :type-delay='70'
+                  :pre-erase-delay='2000'
+                  :erase-delay='35'
+                  erase-style='backspace'
+                  :erase-on-complete='false'
+                  caret-animation='blink'
+                ></vue-typer>
               </h3>
             </div>
           </b-col>
@@ -115,6 +127,14 @@ export default {
   outline: 3px solid white;
   outline-offset: 5px;
   margin: 10px;
+}
+
+.big-header, .vue-typer .custom.char {
+  color: white;
+}
+
+.vue-typer .custom.caret {
+  background-color: white;
 }
 
 .about-me {
