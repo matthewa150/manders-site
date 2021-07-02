@@ -8,6 +8,7 @@
       <b-navbar-nav class="ml-auto">
         <b-nav-item href="https://github.com/matthewa150">GitHub</b-nav-item>
         <b-nav-item href="https://www.linkedin.com/in/matthew-anderson-a65063148">LinkedIn</b-nav-item>
+        <b-nav-item href="manders_cv.pdf" target="_blank">My CV</b-nav-item>
       </b-navbar-nav>
     </b-container>
   </b-navbar>
