@@ -37,7 +37,7 @@ export default {
         {
           place: 'University of Texas Austin',
           dates: '2017 \u2013 present',
-          description: 'Handled a myriad of tasks ranging tasks ranging from bug fixing to updating their company website. A majority of my time was spent writing internal dev. tools using Qt.'
+          description: 'Studied Computer Science and Japanese.'
         },
         {
           place: 'Tokyo Electron US',
