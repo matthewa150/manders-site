@@ -3,7 +3,7 @@
     <div class="footer mt-3 pt-4 pb-2">
       <b-container>
         <b-row align-v="center">
-          <b-col class="text-left">
+          <b-col class="text-left" xs="12" sm="6">
             <h5 class="quiet-head">About this site</h5>
             <p class="quiet-text">
               This website is built using <a class="quiet-link" href="https://nuxtjs.org/">NuxtJS</a>
