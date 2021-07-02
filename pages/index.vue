@@ -1,5 +1,8 @@
 <template>
   <div>
+    <transition name="slide-fade">
+      <AppBar v-if="showBar" fixedTo="top" customStyle='thin-solid' />
+    </transition>
     <AboutHeader />
     <CleanTime />
     <!-- Ideas: blog posts, project highlights -->
@@ -8,7 +11,27 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      showBar: false
+    }
+  },
+  mounted () {
+    window.onscroll = () => {
+      this.changeAppBar()
+    }
+  },
+  methods: {
+    changeAppBar () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        this.showBar = true
+      } else {
+        this.showBar = false
+      }
+    }
+  }
+}
 </script>
 
 <style>

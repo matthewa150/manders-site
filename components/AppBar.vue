@@ -1,5 +1,5 @@
 <template>
-  <b-navbar :fixed="fixedTo" type="dark">
+  <b-navbar :fixed="fixedTo" :class="customStyle" type="dark">
     <b-container>
       <b-navbar-brand>
         <span class="font-weight-bold">Matthew</span>
@@ -21,6 +21,11 @@ export default {
       type: String,
       require: false,
       default: 'null'
+    },
+    customStyle: {
+      type: String,
+      require: false,
+      default: ''
     }
   }
 }
