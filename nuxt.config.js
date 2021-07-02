@@ -1,3 +1,5 @@
+import redirectSSL from 'redirect-ssl'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -14,6 +16,12 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
+  serverMiddleware: [
+    redirectSSL.create({
+      enabled: process.env.NODE_ENV === 'production'
+    })
+  ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -51,5 +59,5 @@ export default {
 
   bootstrapVue: {
     icons: true
-  }
+  },
 }
