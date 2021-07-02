@@ -5,12 +5,13 @@
         <h3 class="timeline-head">Experiences</h3>
       </b-row>
       <b-row class="text-left">
-        <ul class="list">
+        <b-col>
+                  <ul class="list">
           <li v-for="exp in experiences" :key="exp.place">
             <span></span>
             <div class="media">
               <div class="d-flex">
-                <p class="text-right">{{ exp.dates }}</p>
+                <p>{{ exp.dates }}</p>
               </div>
               <div class="media-body">
                 <h4>{{ exp.place }}</h4>
@@ -19,6 +20,7 @@
             </div>
           </li>
         </ul>
+        </b-col>
       </b-row>
     </b-container>
   </section>
@@ -103,7 +105,7 @@ export default {
 /* Timeline item */
 .list > li {
   margin-bottom: 60px;
-position: relative;
+  position: relative;
 }
 
 .list > li > span {
@@ -152,6 +154,7 @@ position: relative;
 
 /* Timeline item date */
 .d-flex > p {
+  text-align: right;
   padding-top: 20px;
   width: 161px;
 }
@@ -165,6 +168,32 @@ position: relative;
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 0px;
   margin-top: 0;
+}
+
+@media (max-width: 480px) {
+  .list::before {
+    display: none;
+  }
+
+  .list > li > span {
+    display: none;
+  }
+
+  .media {
+    display: block;
+  }
+
+  .d-flex > p {
+    text-align: left;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    width: 161px;
+  }
+
+  .media > .d-flex {
+    padding-right: 0px;
+    padding-bottom: 18px;
+  }
 }
 
 </style>
